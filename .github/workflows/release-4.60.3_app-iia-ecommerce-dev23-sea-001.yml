@@ -21,9 +21,15 @@ jobs:
         with:
           dotnet-version: '7.x'
           include-prerelease: true
-
+      
+      - name: Go to src directory
+      - run: cd .\src\
+      
+      - name: Restore nuget packages
+        run: dotnet restore
+        
       - name: Build with dotnet
-        run: dotnet build .\src\IIA_NopCommerce.sln --configuration Release
+        run: dotnet build .\NopCommerce.sln --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
