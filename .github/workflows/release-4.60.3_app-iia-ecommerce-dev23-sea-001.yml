@@ -23,7 +23,7 @@ jobs:
           include-prerelease: true
       
       - name: Go to src directory
-      - run: cd .\src\
+        run: cd .\src\
       
       - name: Restore nuget packages
         run: dotnet restore
