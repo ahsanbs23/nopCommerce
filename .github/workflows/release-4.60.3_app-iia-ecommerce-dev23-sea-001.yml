@@ -23,14 +23,12 @@ jobs:
           include-prerelease: true
       
       - name: Restore nuget packages
-        run: |
-              working-directory: ./src
-              dotnet restore
+        working-directory: ./src
+        run: dotnet restore
         
       - name: Build with dotnet
-        run: |
-              working-directory: ./src
-              dotnet build ./NopCommerce.sln --configuration Release
+        working-directory: ./src
+        run: dotnet build ./NopCommerce.sln --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
