@@ -28,7 +28,7 @@ jobs:
         
       - name: Dotnet publish
         working-directory: ./src
-        run: dotnet publish ./Presentation/Nop.Web/Nop.Web.csproj  -c Release -f net7.0 -r win-x64 --no-self-contained  -o ${{env.DOTNET_ROOT}}/iia-ecommerce
+        run: dotnet publish ./Presentation/Nop.Web/Nop.Web.csproj  -c Release -f net7.0 -r win-x86 --no-self-contained  -o ${{env.DOTNET_ROOT}}/iia-ecommerce
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
