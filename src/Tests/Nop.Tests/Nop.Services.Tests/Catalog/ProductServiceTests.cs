@@ -15,8 +15,6 @@ public class ProductServiceTests : ServiceTest
     #region Fields
 
     private IProductService _productService;
-    private IStaticCacheManager _staticCacheManager;
-    private IEventPublisher _eventPublisher;
 
     #endregion
 
@@ -26,8 +24,6 @@ public class ProductServiceTests : ServiceTest
     public async Task SetUp()
     {
         _productService = GetService<IProductService>();
-        _staticCacheManager = GetService<IStaticCacheManager>();
-        _eventPublisher = GetService<IEventPublisher>();
 
         var product = await _productService.GetProductByIdAsync(1);
         product.ManageInventoryMethod = ManageInventoryMethod.ManageStock;
