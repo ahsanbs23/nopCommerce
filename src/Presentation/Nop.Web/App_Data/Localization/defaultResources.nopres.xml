@@ -2289,6 +2289,15 @@
   <LocaleResource Name="Admin.Catalog.Categories.Fields.ShowOnHomepage.Hint">
     <Value>Check if you want to show a category on home page.</Value>
   </LocaleResource>
+  <LocaleResource Name="Homepage.PremiumProducts">
+    <Value>Premium Products</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.IsPremium">
+    <Value>Is Premium</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.IsPremium.Hint">
+    <Value>Check if you want to make this product premium.</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Categories.Import.CategoriesArentImported">
     <Value>Categories with the following names aren't imported - {0}</Value>
   </LocaleResource>

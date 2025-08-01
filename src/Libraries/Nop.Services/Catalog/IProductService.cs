@@ -39,6 +39,15 @@ public partial interface IProductService
     Task<IList<Product>> GetAllProductsDisplayedOnHomepageAsync();
 
     /// <summary>
+    /// Gets all premium products
+    /// </summary>
+    /// <returns>
+    /// A task that represents the asynchronous operation
+    /// The task result contains the products
+    /// </returns>
+    Task<IList<Product>> GetPremiumProductsAsync();
+
+    /// <summary>
     /// Gets featured products by a category identifier
     /// </summary>
     /// <param name="categoryId">Category identifier</param>

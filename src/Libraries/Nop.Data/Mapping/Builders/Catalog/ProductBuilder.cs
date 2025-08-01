@@ -24,7 +24,8 @@ public partial class ProductBuilder : NopEntityBuilder<Product>
             .WithColumn(nameof(Product.ManufacturerPartNumber)).AsString(400).Nullable()
             .WithColumn(nameof(Product.Gtin)).AsString(400).Nullable()
             .WithColumn(nameof(Product.RequiredProductIds)).AsString(1000).Nullable()
-            .WithColumn(nameof(Product.AllowedQuantities)).AsString(1000).Nullable();
+            .WithColumn(nameof(Product.AllowedQuantities)).AsString(1000).Nullable()
+            .WithColumn(nameof(Product.IsPremium)).AsBoolean().NotNullable().WithDefaultValue(false);
     }
 
     #endregion

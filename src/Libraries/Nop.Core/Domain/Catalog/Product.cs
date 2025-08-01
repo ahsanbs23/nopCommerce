@@ -366,6 +366,11 @@ public partial class Product : BaseEntity, ILocalizedEntity, ISlugSupported, IAc
     public bool DisplayAttributeCombinationImagesOnly { get; set; }
 
     /// <summary>
+    /// Gets or sets a value indicating whether this is a premium product
+    /// </summary>
+    public bool IsPremium { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether this product is returnable (a customer is allowed to submit return request with this product)
     /// </summary>
     public bool NotReturnable { get; set; }

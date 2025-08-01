@@ -113,6 +113,9 @@ public partial record ProductModel : BaseNopEntityModel,
     [NopResourceDisplayName("Admin.Catalog.Products.Fields.ShowOnHomepage")]
     public bool ShowOnHomepage { get; set; }
 
+    [NopResourceDisplayName("Admin.Catalog.Products.Fields.IsPremium")]
+    public bool IsPremium { get; set; }
+
     [NopResourceDisplayName("Admin.Catalog.Products.Fields.MetaKeywords")]
     public string MetaKeywords { get; set; }
 

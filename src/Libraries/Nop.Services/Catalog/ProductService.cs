@@ -585,6 +585,28 @@ public partial class ProductService : IProductService
     }
 
     /// <summary>
+    /// Gets all premium products
+    /// </summary>
+    /// <returns>
+    /// A task that represents the asynchronous operation
+    /// The task result contains the products
+    /// </returns>
+    public virtual async Task<IList<Product>> GetPremiumProductsAsync()
+    {
+        var products = await _productRepository.GetAllAsync(query =>
+        {
+            return from p in query
+                orderby p.DisplayOrder, p.Id
+                where p.Published &&
+                      !p.Deleted &&
+                      p.IsPremium
+                select p;
+        }, cache => cache.PrepareKeyForDefaultCache(NopCatalogDefaults.ProductsPremiumCacheKey));
+
+        return products;
+    }
+
+    /// <summary>
     /// Gets product
     /// </summary>
     /// <param name="productId">Product identifier</param>
